@@ -1,0 +1,23 @@
+<h2>Close Button:</h2>
+<p>1. If the text box has no value, no action.</p>
+<p>2. If the text box has value, alert value then confirm save or not?</p>
+<p>3. If you click cancel save, goto next action.</p>
+<textarea type="text" id="txt" cols="50" rows="10"></textarea></br>
+<button onclick="close_form('txt');">Close</button>
+<script type="text/javascript">
+	function close_form(id){
+		var input1 = document.getElementById(id).value;
+		if (input1 == "") {
+			return false;
+		} else {
+			alert("You wrote: "+input1);
+			var conf = confirm("Do you want to save?");
+			if (conf == true) {
+				return false;
+			} else {
+				// window.location.assign('https://google.com/');
+				window.open('https://google.com/', '_blank');
+			}
+		}
+	}
+</script>
